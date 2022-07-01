@@ -1,0 +1,7 @@
+server:
+  tomcat:
+    connection-timeout: 100000
+  port: 9004
+spring:
+  application:
+    name: PROD

@@ -1,0 +1,50 @@
+server:
+  tomcat:
+    connection-timeout: 100000      
+  port: 9090
+  servlet:
+     context-path: /dining
+spring:
+  application:
+    name: DV-CLOUD-FNB
+    
+  datasource:
+    url: jdbc:${dbType}://${dbIP}:${dbPort}/${dbName}
+    username: ${dbUser}
+    password: ${dbPass}
+    driver-class-name: org.${dbType}.jdbc.Driver
+    hikari:
+       connection-timeout: 20000
+       maximum-pool-size: 15
+  
+  jpa:
+    properties:
+      hibernate:
+          format_sql: true
+          generate_statistics: false
+          jdbc:
+           batch_size: 15
+           order_inserts: true
+          show-sql: true
+          ddl-auto: update
+
+config:
+   download-image-dir: ${gatewayHost}/gateway/asset/
+   upload-image-dir: /var/www/html/asset/
+
+logging:
+  file:
+    path: /var/log/service/
+    name: /var/log/service/fnb.log
+  level:
+   com.digivalet.fnb: INFO
+   
+
+eureka:    
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eurekaServerIp}:${eurekaServerPort}/eureka        
+  instance:
+    prefer-ip-address: true

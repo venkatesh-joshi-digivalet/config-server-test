@@ -1,0 +1,7 @@
+server:
+  tomcat:
+    connection-timeout: 100000
+  port: 9003
+spring:
+  application:
+    name: QA

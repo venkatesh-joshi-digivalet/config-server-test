@@ -2,3 +2,6 @@ server:
   tomcat:
     connection-timeout: 100000
   port: 9001
+spring:
+  application:
+    name: DEFAULT

@@ -5,4 +5,4 @@ server:
   servlet:
     context-path: ${context}
 config:
-   upload-image-dir: /var/www/html/asset/
+   upload-image-dir: /var/www/html/asset/test

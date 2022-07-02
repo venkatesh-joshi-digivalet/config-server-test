@@ -4,3 +4,5 @@ server:
   port: 9004
   servlet:
     context-path: ${context}
+config:
+   upload-image-dir: /var/www/html/asset/

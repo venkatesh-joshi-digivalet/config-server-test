@@ -2,3 +2,5 @@ server:
   tomcat:
     connection-timeout: 100000
   port: 9004
+  servlet:
+    context-path: ${context}
